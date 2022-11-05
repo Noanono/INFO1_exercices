@@ -4,7 +4,7 @@
 
 #include "fibonacci.h"
 
-int fibonacci(int a, int b, int n){
+int Fibonacci(int a, int b, int n){
     switch (n) {
         case 0:
             return a;
@@ -15,7 +15,7 @@ int fibonacci(int a, int b, int n){
             break;
 
         default:
-            return fibonacci(a, b, n-1) + fibonacci(a, b, n-2);
+            return Fibonacci(a, b, n - 1) + Fibonacci(a, b, n - 2);
             break;
     }
 }
