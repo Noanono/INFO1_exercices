@@ -43,14 +43,21 @@ void Affiche_char(int n, char* t){
     }
 }
 
-void Schema_sapin(int n){
+void Schema_sapin(int n, int k){
     int i = n;
     while(i >= 1){
         //boucle de creation des feuilles du sapin
         Affiche_char(i, " ");
-        Affiche_char(n-i+1, "*");
-        if(i != n){
-            Affiche_char(n-i, "*");
+        if(i != n - k + 1) {
+            Affiche_char(n - i + 1, "*");
+            if (i != n) {
+                Affiche_char(n - i, "*");
+            }
+        }else{
+            Affiche_char(n - i + 1, "o");
+            if (i != n) {
+                Affiche_char(n - i, "o");
+            }
         }
         cout << endl;
         i--;

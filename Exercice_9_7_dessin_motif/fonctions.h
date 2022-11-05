@@ -21,7 +21,7 @@ void Schema_inverse(int n);
  * E: 1 entier : la taile de la plus grande ligne d'etoile
  * S: vide
  */
-void Schema_sapin(int n);
+void Schema_sapin(int n, int k);
 
 void Affiche_char(int n, char t);
 
