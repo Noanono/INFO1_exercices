@@ -23,4 +23,6 @@ void Schema_inverse(int n);
  */
 void Schema_sapin(int n);
 
+void Affiche_char(int n, char t);
+
 #endif //EXERCICE_9_7_DESSIN_MOTIF_FONCTIONS_H

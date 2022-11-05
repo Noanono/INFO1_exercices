@@ -22,46 +22,44 @@ void Schema_triangle(int n){
 
 void Schema_inverse(int n){
     int i = n;
-    while(i >= 1){
+    while(i >= 1) {
         int k = i;
-        while(k >= 1){
+        while (k >= 1) {
             cout << "*";
             k--;
         }
-        int j = 1;
-        while(j <= i){
-            cout << "*";
-            j++;
-        }
-        if(i >= 2){
-            int l = 1;
-            while(l <= i - 1){
-                cout << "*";
-                l++;
-            }
-        }
-        cout << endl;
         i--;
+        cout << endl;
     }
-    int f = 1;
-    while(f <= n){
-        cout << " ";
-    }
-    cout << "|_|";
     cout << endl;
+}
+
+void Affiche_char(int n, char* t){
+    if(n == 0){
+        return ;
+    }else{
+        cout << t;
+        Affiche_char(n-1, t);
+    }
 }
 
 void Schema_sapin(int n){
     int i = n;
     while(i >= 1){
-        int k = i;
-        while(k >= 1){
-            cout << " ";
-            k--;
+        //boucle de creation des feuilles du sapin
+        Affiche_char(i, " ");
+        Affiche_char(n-i+1, "*");
+        if(i != n){
+            Affiche_char(n-i, "*");
         }
-
         cout << endl;
         i--;
     }
+    int f = 1;
+    while(f <= n-1){
+        cout << " ";
+        f++;
+    }
+    cout << "|_|";
     cout << endl;
 }
