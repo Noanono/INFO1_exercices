@@ -5,13 +5,17 @@
 #include "fibonacci.h"
 
 int fibonacci(int a, int b, int n){
-    if(n == 0){
-        return a;
-    }else{
-        if(n == 1){
+    switch (n) {
+        case 0:
+            return a;
+            break;
+
+        case 1:
             return b;
-        }else{
+            break;
+
+        default:
             return fibonacci(a, b, n-1) + fibonacci(a, b, n-2);
-        }
+            break;
     }
 }
