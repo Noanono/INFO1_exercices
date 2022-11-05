@@ -4,6 +4,9 @@
 #include <iostream>
 using namespace std;
 
+#include<time.h> //inclusion de la fonction time()
+#include<stdlib.h> //inclusion des fonctions rand() et srand()
+
 #include "fonctions.h"
 
 void Schema_triangle(int n){
@@ -54,9 +57,14 @@ void Schema_sapin(int n, int k){
                 Affiche_char(n - i, "*");
             }
         }else{
-            Affiche_char(n - i + 1, "o");
+            unsigned int alea;
+            int m;
+            m = rand() % (n - 1);
+            srand(time(NULL)); //initialisation du generateur
+            alea=(rand() % (n-m+1))+m; //genere un entier aleatoire entier compris
+            Affiche_char(n - i + 1, (char*)alea);
             if (i != n) {
-                Affiche_char(n - i, "o");
+                Affiche_char(n - i, (char*)alea);
             }
         }
         cout << endl;
