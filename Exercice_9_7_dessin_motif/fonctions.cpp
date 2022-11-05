@@ -4,8 +4,8 @@
 #include <iostream>
 using namespace std;
 
-#include<time.h> //inclusion de la fonction time()
-#include<stdlib.h> //inclusion des fonctions rand() et srand()
+#include<ctime> //inclusion de la fonction time()
+#include<cstdlib> //inclusion des fonctions rand() et srand()
 
 #include "fonctions.h"
 
@@ -37,7 +37,7 @@ void Schema_inverse(int n){
     cout << endl;
 }
 
-void Affiche_char(int n, char* t){
+void Affiche_char(int n, const char* t){
     if(n == 0){
         return ;
     }else{
@@ -57,14 +57,26 @@ void Schema_sapin(int n, int k){
                 Affiche_char(n - i, "*");
             }
         }else{
-            unsigned int alea;
-            int m;
-            m = rand() % (n - 1);
-            srand(time(NULL)); //initialisation du generateur
-            alea=(rand() % (n-m+1))+m; //genere un entier aleatoire entier compris
-            Affiche_char(n - i + 1, (char*)alea);
-            if (i != n) {
-                Affiche_char(n - i, (char*)alea);
+            //Generation d'un caractere aleatoire
+            srand(time(NULL));
+            int alea = rand() % 3;
+            if(alea == 0){
+                Affiche_char(n - i + 1, "o");
+                if (i != n) {
+                    Affiche_char(n - i, "o");
+                }
+            }else {
+                if(alea == 1){
+                    Affiche_char(n - i + 1, "x");
+                    if (i != n) {
+                        Affiche_char(n - i, "x");
+                    }
+                }else {
+                    Affiche_char(n - i + 1, "!");
+                    if (i != n) {
+                        Affiche_char(n - i, "!");
+                    }
+                }
             }
         }
         cout << endl;
