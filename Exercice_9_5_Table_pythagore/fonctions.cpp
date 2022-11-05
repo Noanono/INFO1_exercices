@@ -9,18 +9,28 @@ void Table_pythagore(unsigned int x, unsigned int y){
     while(i <= x){
         unsigned int j = 1;
         if(i == 0){
-            cout << "  ";
+            cout << "   ";
         }else{
-            cout << i;
-            cout << " ";
+            if(i < 10){
+                cout << i;
+                cout << "  ";
+            }else{
+                cout << i;
+                cout << " ";
+            }
         }
         while(j <= y){
             if(i == 0){
                 cout << j;
-                cout << " ";
+                cout << "  ";
             }else{
-                cout << j*i;
-                cout << " ";
+                if(i*j < 10) {
+                    cout << i * j;
+                    cout << "  ";
+                }else{
+                    cout << i * j;
+                    cout << " ";
+                }
             }
             j++;
         }
