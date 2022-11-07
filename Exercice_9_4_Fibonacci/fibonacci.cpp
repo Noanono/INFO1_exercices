@@ -5,6 +5,7 @@
 #include "fibonacci.h"
 
 int Fibonacci(int a, int b, int n){
+
     switch (n) {
         case 0:
             return a;
@@ -15,7 +16,14 @@ int Fibonacci(int a, int b, int n){
             break;
 
         default:
-            return Fibonacci(a, b, n - 1) + Fibonacci(a, b, n - 2);
+            //Fibonacci en itératif
+            int f = 0;
+            for (int i = 2; i <= n; i++) {
+                f = a + b;
+                a = b;
+                b = f;
+            }
+            return f;
             break;
     }
 }
