@@ -4,7 +4,7 @@ using namespace std;
 #include "fibonacci.h"
 
 int main() {
-    int a, b, n, f;
+    unsigned int a, b, n, f;
     cout << "Saisir deux entiers d'initialisation de la suite :" << endl;
     cin >> a >> b;
 
