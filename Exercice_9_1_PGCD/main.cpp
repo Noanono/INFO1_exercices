@@ -10,7 +10,9 @@ int main() {
     cin >> a >> b;
 
     unsigned int pgcd_ab;
-    pgcd_ab = pgcd(a, b);
+    pgcd_ab = Pgcd(a, b);
+
+    cout << "Le Pgcd est de : " << pgcd_ab << endl;
 
     return 0;
 }
