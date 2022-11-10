@@ -2,4 +2,4 @@
  * E: 2 entiers positif
  * S: vide
  */
-void Table_pythagore(unsigned int x, unsigned int y);
+void Table_pythagore(unsigned int x);
