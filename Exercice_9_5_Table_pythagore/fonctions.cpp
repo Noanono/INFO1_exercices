@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <iomanip>
 
 #include "fonctions.h"
 
@@ -9,29 +10,18 @@ void Table_pythagore(unsigned int x, unsigned int y){
     while(i <= x){
         unsigned int j = 1;
         if(i == 0){
-            cout << "   ";
+            cout << setw(4) << setfill(' ') << " ";
         }else{
-            if(i < 10){
-                cout << i;
-                cout << "  ";
-            }else{
-                cout << i;
-                cout << " ";
-            }
+            cout << setw(4) << setfill(' ') << i;
         }
+        cout << " ";
         while(j <= y){
             if(i == 0){
-                cout << j;
-                cout << "  ";
+                cout << setw(4) << setfill(' ') << j;
             }else{
-                if(i*j < 10) {
-                    cout << i * j;
-                    cout << "  ";
-                }else{
-                    cout << i * j;
-                    cout << " ";
-                }
+                cout << setw(4) << setfill(' ') << i * j;
             }
+            cout << " ";
             j++;
         }
         cout << endl;
