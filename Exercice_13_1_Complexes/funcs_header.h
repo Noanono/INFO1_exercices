@@ -34,7 +34,7 @@ Complexe conjuge(Complexe);
  * E/S: vide
  * S: 1 complexe
  */
-Complexe opppose(Complexe);
+Complexe oppose(Complexe);
 
 /*
  * R: Calcule et retourne l'inverse d'un complexe
