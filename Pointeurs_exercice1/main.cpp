@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 
     float x, y;
-    float * p_f;
+    float * p_f = nullptr;
 
     p_f = &x;
     *p_f = -2.3;
